@@ -1,0 +1,3 @@
+# HELM -Ctrl  (memory-generator variant: A0)
+controller:
+  kind: rule

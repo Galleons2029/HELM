@@ -1,0 +1,5 @@
+# ArchRAG-style  (memory-generator variant: A0)
+governance:
+  enabled: false
+memory:
+  provenance: false

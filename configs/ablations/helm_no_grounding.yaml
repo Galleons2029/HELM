@@ -1,0 +1,3 @@
+# HELM no-grounding  (memory-generator variant: A0)
+memory:
+  ground_to_m1: false

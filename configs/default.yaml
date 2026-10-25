@@ -1,0 +1,43 @@
+# Defaults mirror the paper's reproducibility table (Appendix "Reproducibility: hyperparameters and budgets").
+# Fields marked ASSUMPTION in helm/config.py are not specified by the paper.
+seeds: [0, 42, 123]
+
+reasoner:
+  model: Qwen/Qwen3-8B
+  context_window: 128000
+  temperature: 0.1
+  top_p: 0.9
+  max_tokens: 1024
+
+controller:
+  kind: heuristic        # heuristic | rule | llm | learned   (paper: Qwen3-4B full FT, alpha=1.0, beta=0.05)
+  model: Qwen/Qwen3-4B
+  alpha: 1.0
+  beta: 0.05
+
+embedding:
+  backend: hashing       # offline default; set sentence_transformers + model_name for Qwen3-Embedding-4B
+  model_name: Qwen/Qwen3-Embedding-4B
+  tool_aware: true
+
+governance:              # Eq. (1): fixed weights
+  lambda_sim: 1.0
+  lambda_time: 1.0
+  lambda_status: 10.0
+  lambda_src: 1.0
+  step_window: 200       # staleness window: 200 steps ...
+  time_window_days: 7.0  # ... or 7 days, plus snapshot/version check
+  check_version: true
+
+memory:
+  budget_m1: 200
+  budget_m2: 50
+  budget_m3: 20
+  k1: 5
+  k2: 5
+  k3: 3
+  hnsw_M: 16
+  ef_search: 64
+  max_recall_tokens: 1500
+  max_writes_per_step: 1
+  max_consolidations_per_episode: 5

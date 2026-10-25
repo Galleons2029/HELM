@@ -1,0 +1,3 @@
+# HELM -consistency  (memory-generator variant: A0)
+governance:
+  use_consistency: false

@@ -1,0 +1,16 @@
+# Core (everything in helm/memory, helm/sim, helm/baselines, tests runs with just these)
+numpy>=1.24
+pyyaml>=6.0
+
+# Optional: training pipelines (helm/training) and learned controller
+torch>=2.2
+transformers>=4.51
+
+# Optional: matplotlib/pandas for scripts/aggregate.py plots
+matplotlib>=3.7
+pandas>=2.0
+
+# Optional extras, switched on by config (not needed for the offline default):
+#   sentence-transformers  -> Qwen3-Embedding via helm.embedding.st_backend
+#   openai                 -> OpenAI-compatible endpoint (vLLM etc.) via helm.llm.client
+#   hnswlib                -> C++ HNSW via helm.index (index_kind: hnswlib)

@@ -1,0 +1,3 @@
+# HELM -freshness  (memory-generator variant: A0)
+governance:
+  use_freshness: false

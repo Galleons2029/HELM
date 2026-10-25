@@ -1,0 +1,6 @@
+# HELM-lite  (memory-generator variant: A0)
+memory:
+  use_m2: false
+  use_m3: false
+governance:
+  use_consistency: false

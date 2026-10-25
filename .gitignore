@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+outputs/
+.mplconfig/
+checkpoints/
+*.egg-info/
+.DS_Store
